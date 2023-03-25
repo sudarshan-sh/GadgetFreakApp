@@ -1,33 +1,32 @@
-import React from 'react'
-import styled from 'styled-components'
-import { Link } from 'react-router-dom'
-import heroBcg from '../assets/hero-bcg.jpeg'
-import heroBcg2 from '../assets/hero-bcg-2.jpeg'
+import React from "react";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+// import heroBcg from "../assets/hero-bcg.jpeg";
+// import heroBcg2 from "../assets/hero-bcg-2.jpeg";
+import heroBcg from "../assets/hero-bcg.svg";
+
 const Hero = () => {
   return (
-    <Wrapper className='section-center'>
-      <article className='content'>
+    <Wrapper className="section-center">
+      <article className="content">
         <h1>
-          design your <br />
-          comfort zone
+          We enjoy <br />
+          our gadgets
         </h1>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, at
-          sed omnis corporis doloremque possimus velit! Repudiandae nisi odit,
-          aperiam odio ducimus, obcaecati libero et quia tempora excepturi quis
-          alias?
+        Gadgets often feature advanced technology and innovative designs, allowing them to perform a wide range of tasks that were once only possible using specialized equipment or complex software.
         </p>
-        <Link to='/products' className='btn hero-btn'>
+        <Link to="/products" className="btn hero-btn">
           shop now
         </Link>
       </article>
-      <article className='img-container'>
-        <img src={heroBcg} alt='nice table' className='main-img' />
-        <img src={heroBcg2} alt='person working' className='accent-img' />
+      <article className="img-container">
+        <img src={heroBcg} alt="nice table" className="main-img" />
+        {/* <img src={heroBcg2} alt="person working" className="accent-img" /> */}
       </article>
     </Wrapper>
-  )
-}
+  );
+};
 
 const Wrapper = styled.section`
   min-height: 60vh;
@@ -47,7 +46,7 @@ const Wrapper = styled.section`
   @media (min-width: 992px) {
     height: calc(100vh - 5rem);
     grid-template-columns: 1fr 1fr;
-    gap: 8rem;
+    gap: 2rem;
     h1 {
       margin-bottom: 2rem;
     }
@@ -78,17 +77,17 @@ const Wrapper = styled.section`
       transform: translateX(-50%);
       border-radius: var(--radius);
     }
-    .img-container::before {
-      content: '';
-      position: absolute;
-      width: 10%;
-      height: 80%;
-      background: var(--clr-primary-9);
-      bottom: 0%;
-      left: -8%;
-      border-radius: var(--radius);
-    }
+    // .img-container::before {
+    //   content: "";
+    //   position: absolute;
+    //   width: 10%;
+    //   height: 80%;
+    //   background: var(--clr-primary-9);
+    //   bottom: 0%;
+    //   left: -8%;
+    //   border-radius: var(--radius);
+    // }
   }
-`
+`;
 
-export default Hero
+export default Hero;
